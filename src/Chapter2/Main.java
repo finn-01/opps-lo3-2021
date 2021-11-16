@@ -8,6 +8,9 @@ public class Main {
         Cat cat= new Cat("Doraemon", "Janpan", 1000);
         Cat cat1 = new Cat();
         Office office= new Office();
+        Student student = new Student();
+        Student student1 = new Student();
+        Student student2 = new Student("Nguyen Trung Hiu", "999", 2001);
 
         firstStudent.name = "Tung";
         firstStudent.codeStudent = "123";
@@ -35,6 +38,24 @@ public class Main {
         System.out.println("-------------------------");
 
         thirdStudent.showInformation();
+        System.out.println("------------------------------");
+
+        //Student
+        student.setName("Co Dai");
+        student.setCodeStudent("999");
+        student.setBirthYears(2001);
+
+        student.showInformation("L03");
+        System.out.println("-----------------------------------");
+
+        //Student1
+        student1.showInformation();
+        System.out.println("----------------------------");
+
+        //Student2
+        student2.showInformation();
+        System.out.println("---------------------------");
+
 
         //Cat
         cat.showInformation();
