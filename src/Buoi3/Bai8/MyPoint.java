@@ -5,6 +5,8 @@ public class MyPoint {
     public int y;
 
     public MyPoint() {
+        this.x = 0;
+        this.y = 0;
     }
 
     public MyPoint(int x, int y) {
@@ -27,6 +29,23 @@ public class MyPoint {
     public void setY(int y) {
         this.y = y;
     }
+
+    public void setXY (int x,int y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public void bienDoi(int x, int y){
+        System.out.println("(" + x + ", " + y + ")" );
+    }
+
+    public float distance(int x, int y){
+        float x1 = (float) Math.pow(this.x - x, 2);
+        float y1 = (float) Math.pow(this.y - y, 2);
+        return (float) Math.sqrt(x1 + y1);
+    }
+
+
 
 
 }
