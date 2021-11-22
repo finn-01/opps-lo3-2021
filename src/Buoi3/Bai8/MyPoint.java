@@ -35,8 +35,9 @@ public class MyPoint {
         this.y = y;
     }
 
-    public void bienDoi(int x, int y){
-        System.out.println("(" + x + ", " + y + ")" );
+    @Override
+    public String toString(){
+        return  "(" + x + ", " + y + ")";
     }
 
     public float distance(int x, int y){
@@ -45,7 +46,9 @@ public class MyPoint {
         return (float) Math.sqrt(x1 + y1);
     }
 
-
-
-
+    public float distance(MyPoint myPoint){
+        float x1 = (float) Math.pow(this.x - myPoint.getX(), 2);
+        float y1 = (float) Math.pow(this.y - myPoint.getY(), 2);
+        return (float) Math.sqrt(x1 + y1);
+    }
 }
