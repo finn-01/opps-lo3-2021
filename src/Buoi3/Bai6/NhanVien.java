@@ -1,4 +1,4 @@
-package Buoi3.NhanVien;
+package Buoi3.Bai6;
 
 import java.util.Scanner;
 
