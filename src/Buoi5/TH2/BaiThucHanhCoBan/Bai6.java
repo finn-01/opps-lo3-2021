@@ -28,13 +28,13 @@ public class Bai6 {
         return sum;
     }
 
+
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("N: ");
         int n = scanner.nextInt();
         scanner.nextLine();
-
         System.out.println(sum(n));
         System.out.println(chanLe(n));
     }
