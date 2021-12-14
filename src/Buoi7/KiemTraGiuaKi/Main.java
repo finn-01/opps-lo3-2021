@@ -7,8 +7,11 @@ import static java.lang.System.exit;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         Store store = new Store();
+
         int chon;
+
         while(true)
         {
             menu();
@@ -62,6 +65,7 @@ public class Main {
         }
     }
 
+    //Menu
     public static void menu()
     {
         System.out.println(" __________________________________________");

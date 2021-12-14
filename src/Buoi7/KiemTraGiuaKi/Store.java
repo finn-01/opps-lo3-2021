@@ -4,12 +4,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Store {
+    //Input
     Scanner scanner = new Scanner(System.in);
 
+    //Khai bao
     public static int totalItems = 0;
     public int MAX_ITEMS = 1000;
     ArrayList<Book> listItems = new ArrayList();
 
+    //Ham them sach
     public void add ()
     {
         Book book = new Book();
@@ -28,6 +31,7 @@ public class Store {
         totalItems++;
     }
 
+    //Ham xoa
     public void delete (int id)
     {
         for(Book x: listItems)
@@ -47,6 +51,7 @@ public class Store {
         }
     }
 
+    //Ham tim
     public void find(String name)
     {
         for(Book x: listItems)
@@ -64,6 +69,7 @@ public class Store {
         }
     }
 
+    //Ham sua
     public void edit(int id)
     {
         for(Book x: listItems)
@@ -85,6 +91,7 @@ public class Store {
         }
     }
 
+    //Ham liet ke sách
     public void list()
     {
         System.out.println("Tong so sach la: " + totalItems);

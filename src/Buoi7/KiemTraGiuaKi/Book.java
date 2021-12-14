@@ -1,10 +1,12 @@
 package Buoi7.KiemTraGiuaKi;
 
 public class Book {
+    //Khai bao
     public int id;
     public String name;
     public int price;
 
+    //Getter setter
     public int getId() {
         return id;
     }
