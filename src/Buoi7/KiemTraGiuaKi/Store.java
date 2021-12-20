@@ -26,9 +26,12 @@ public class Store {
 
         System.out.println("Nhap gia sach: ");
         book.setPrice(scanner.nextInt());
+        scanner.nextLine();
 
         listItems.add(book);
         totalItems++;
+
+        System.out.println("Da them thanh cong: " + book.toString() + " vao danh sach.");
     }
 
     //Ham xoa
@@ -40,7 +43,7 @@ public class Store {
             {
                 listItems.remove(x);
                 totalItems--;
-                System.out.println("Xoa thanh cong!");
+                System.out.println("Xoa thanh cong sach co id = " + id);
                 break;
             }
             else
@@ -79,8 +82,13 @@ public class Store {
                 scanner.nextLine();
                 System.out.println("Nhap ten sach moi: ");
                 x.setName(scanner.nextLine());
+
                 System.out.println("Nhap gia sach moi: ");
                 x.setPrice(scanner.nextInt());
+                scanner.nextLine();
+
+                System.out.println("Da sua thanh cong!");
+                System.out.println("Sach da sua thanh: " + x.toString());
                 break;
             }
             else
