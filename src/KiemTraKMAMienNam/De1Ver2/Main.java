@@ -12,7 +12,10 @@ public class Main {
         int choice = 0;
 
         do{
+            //in menu
             menu();
+
+            //chon
             choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -60,7 +63,7 @@ public class Main {
         }while (choice != 0);
     }
 
-    public static void menu() throws InterruptedException {
+    public static void menu(){
         System.out.println(" ___________________________________________");
         System.out.println("|                     Menu                  |");
         System.out.println("|-------------------------------------------|");

@@ -109,13 +109,16 @@ public class SieuThi {
         int maKhachHang = scanner.nextInt();
         scanner.nextLine();
 
+        //check khach hang
         KhachHang khachHang = checkIDKhachHang(maKhachHang);
 
+        //khach hang null
         if(khachHang == null){
             System.out.println("Khach hang co ma khach hang: " + maKhachHang + " khong ton tai!");
             return;
         }
 
+        //Nhap ten, tuoi neu thay
         System.out.println("Nhap ten moi: ");
         String newTen = scanner.nextLine();
 
@@ -123,6 +126,7 @@ public class SieuThi {
         int newNam = scanner.nextInt();
         scanner.nextLine();
 
+        //set ten
         khachHang.setTenKhachHang(newTen);
         khachHang.setNamSinh(newNam);
     }
@@ -133,13 +137,16 @@ public class SieuThi {
         }
     }
 
+    //dang nhap de mua hang
     public KhachHang dangNhapKhachHang(){
         System.out.println("Dang nhap cung ma khach hang: ");
         int maKhachHang = scanner.nextInt();
         scanner.nextLine();
 
+        //check khach hang
         KhachHang khachHang = checkIDKhachHang(maKhachHang);
 
+        //neu sai thi nhap lai
         while (khachHang == null){
             System.out.println("Dang nhap that bai vi ma khach hang " + maKhachHang + " khong ton tai");
             System.out.println("Vui long dang nhap lai!!!");
@@ -153,7 +160,10 @@ public class SieuThi {
     }
 
     public void khachHangMuaSanPham() throws InterruptedException {
+        //khach hang da dang ki voi sieu thi
         KhachHang khachHang = dangNhapKhachHang();
+
+        //hoa don phai co thong tin khach hang
         HoaDon hoaDon = new HoaDon(khachHang);
 
         int choice = -1;
@@ -165,6 +175,7 @@ public class SieuThi {
             choice = scanner.nextInt();
             scanner.nextLine();
 
+            //thoat
             if(choice == 0){
                 System.out.print("Dang thoat");
                 Thread.sleep(1000);
@@ -176,8 +187,10 @@ public class SieuThi {
                 break;
             }
 
+            //check sp co ton tai hay khong
             SanPham sanPham = checkIDSanPham(choice);
 
+            //sp khong ton tai
             if(sanPham == null){
                 System.out.println("Ma san pham " + choice + " khong ton tai!");
                 break;
@@ -186,35 +199,43 @@ public class SieuThi {
             System.out.println("Nhap so luong: ");
             int soLuong = scanner.nextInt();
 
+            //So luong sp k du se break
             if(soLuong > sanPham.getSoLuong()){
                 System.out.println("Khong du so luong de ban!");
                 break;
             }
 
+            //Neu sp du thi se tru sp trong arrays voi so san pham muon lay
             sanPham.giamSoLuong(soLuong);
 
+            //tao ra hoa don moi
             hoaDon.add(sanPham, soLuong);
         }while (choice != 0);
 
-        if(hoaDon.hoaDonChoTungSanPhamArrayList.size() != 0){
+        if(!hoaDon.hoaDonChoTungSanPhamArrayList.isEmpty()){
             hoaDonArrayList.add(hoaDon);
+            hoaDon.thongTinHoaDon();
             hoaDon.khachHang.setTongTienMuaHang(hoaDon.tinhTongTienHoaDon());
         }
     }
 
+    //in khach hang
     public void inThongTinKhachHang(){
         for (int i = 0; i < khachHangArrayList.size(); i++) {
             khachHangArrayList.get(i).thongTinKhachHang();
         }
     }
 
+    //in hoa don
     public void inHoaDon(){
         for (int i = 0; i < hoaDonArrayList.size(); i++) {
             hoaDonArrayList.get(i).thongTinHoaDon();
         }
     }
 
+    //in khach hang va sap xep
     public void inKhachHangSapXep(){
+        //sort
         khachHangArrayList.sort((n, m) ->(int) (n.tongTienMuaHang - m.tongTienMuaHang));
 
         for (int i = 0; i < khachHangArrayList.size(); i++) {
