@@ -47,8 +47,8 @@ public class FileStream {
 
     private static void writeFileWithBuffer(String data){
         try {
-            FileOutputStream fileOutputStream 			= new FileOutputStream(FILE_NAME, false);
-            BufferedOutputStream bufferedOutputStream	= new BufferedOutputStream(fileOutputStream);
+            FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME, false);
+            BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(fileOutputStream);
 
 
             bufferedOutputStream.write(data.getBytes());

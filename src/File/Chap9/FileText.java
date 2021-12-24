@@ -9,7 +9,7 @@ public class FileText {
 
     public static void main(String[] args) {
 //		writeFile("-FileText-");
-//		myPrint(readFile());
+        myPrint(readFile());
         writeLineFile();
         myPrint(readLine());
     }
@@ -69,7 +69,7 @@ public class FileText {
 
 
         try {
-            fileWriter = new FileWriter(FILE_NAME, false);
+            fileWriter = new FileWriter(FILE_NAME, true);
             printWriter= new PrintWriter(fileWriter);
 
             // java
@@ -78,7 +78,7 @@ public class FileText {
 
             printWriter.println("Java");
             printWriter.println("is");
-            printWriter.print("easy");
+            printWriter.println("easy");
             printWriter.println("!");
 
             printWriter.close();
