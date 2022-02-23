@@ -1,0 +1,4 @@
+Person{hoTen='Sam', ngaySinh='2001', diaChi='HN', gioiTinh='Nam'}NhanVien{maNV='1', heSoLuong=1000, donVi='HD'}
+Person{hoTen='Sam1', ngaySinh='2001', diaChi='HN', gioiTinh='Nam'}NhanVien{maNV='1', heSoLuong=1000, donVi='HD'}
+Person{hoTen='Sam2', ngaySinh='2001', diaChi='HN', gioiTinh='Nam'}NhanVien{maNV='1', heSoLuong=1000, donVi='HD'}
+Person{hoTen='Sam3', ngaySinh='2001', diaChi='HN', gioiTinh='Nam'}NhanVien{maNV='1', heSoLuong=1000, donVi='HD'}
